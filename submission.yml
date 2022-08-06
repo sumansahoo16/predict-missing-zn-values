@@ -1,0 +1,10 @@
+# Unearthed Submission Configuration
+#
+# This file is for future configuration capability and is required by the
+# Unearthed submission pipeline. Please DO NOT modify.
+challenge: estimating-zinc
+service:
+  sagemaker:
+    instance_type_training: ml.c5.4xlarge
+    instance_type_processor: ml.c5.4xlarge
+    instance_type_inference: ml.c5.4xlarge

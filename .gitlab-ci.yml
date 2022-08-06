@@ -1,0 +1,16 @@
+stages:
+  - submit_to_humyn
+
+submit:
+  stage: submit_to_humyn
+  image: unearthed/docker-unearthed-cli:20.10.12-dind-alpine3.15
+  services:
+    - docker:dind
+  script:
+    # Ensure we have the latest version
+    - pip install --upgrade unearthed-cli
+    - unearthed submit
+    - 'curl -H "Content-Type: application/json" -X POST "$UNEARTHED_PIPELINE_NOTIFY_ENDPOINT/crowdml-pipeline-triggered" -d "$(cat .unearthed_last_submission.json | jq ". |.commitSha = \"$CI_COMMIT_SHA\" | .commitBranch=\"$CI_COMMIT_BRANCH\" | .commitMessage=\"$CI_COMMIT_MESSAGE\"")"'
+  only:
+    refs:
+      - main

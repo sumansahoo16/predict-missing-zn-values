@@ -1,0 +1,9 @@
+# this line adds additional files to the Humyn.ai submission
+include requirements.txt
+include ensemble_model.py
+
+# to add additional source code to your submission you must include it here
+# include your_extra_module.py
+
+# and remove the MANIFEST.in itself from the submission
+exclude MANIFEST.in

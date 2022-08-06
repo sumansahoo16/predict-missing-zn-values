@@ -1,0 +1,16 @@
+{
+  "challengeId": "77f7b344-4862-4038-9fc2-d74e651d6bff",
+  "innovatorPlatformRef": "77f7b344-4862-4038-9fc2-d74e651d6bff",
+  "name": "Where in the World did Values for Zn go?",
+  "slug": "estimating-zinc",
+  "link": "https://app.humyn.ai/challenges/122",
+  "start": "2020-01-01T00:00:00.000Z",
+  "end": "2025-00-01T00:00:00.000Z",
+  "templateUrl": "",
+  "publicDataUrl": "",
+  "dockerImage": "unearthed/sagemaker-scikit-learn:0.23-1-cpu-py3",
+  "scoringFunctionUrl": "",
+  "dataVersion": 0,
+  "createdAt": "2021-02-22T00:00:00.000Z",
+  "updatedAt": "2021-02-22T00:00:00.000Z"
+}
